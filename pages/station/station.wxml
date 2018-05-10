@@ -1,0 +1,51 @@
+<view>
+  <view class="flag">
+      <view class="line_flag"></view>
+      <text>类别</text>
+    </view>
+  <view class="navbar">
+    <block wx:for="{{dataList.data.category}}" wx:for-item="item" wx:key>
+    <navigator url="../stationsheet/stationsheet?id={{item.id}}">
+      <view class='nav'>
+        <text>{{item.name}}</text>
+      </view>
+    </navigator>
+    </block>
+  </view>
+   <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>推荐节目</text>
+    </view>
+    <view class="hot_recomment content">
+      <block class="content_list" wx:for="{{dataList.data.recommod_station}}" wx:for-item="item" wx:key>
+      <navigator url="../stationsheet/stationsheet?id={{item.id}}"> 
+         <view class='img_item item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </navigator>       
+      </block>
+    </view>
+
+  </view>
+
+  <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>节目排行榜</text>
+    </view>
+    <view class="hot_recomment content">
+      <block class="content_list" wx:for="{{dataList.data.top_station}}" wx:for-item="item" wx:key>
+      <navigator url="../stationsheet/stationsheet?id={{item.id}}"> 
+         <view class='img_item item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </navigator>       
+      </block>
+    </view>
+
+  </view>
+
+</view>

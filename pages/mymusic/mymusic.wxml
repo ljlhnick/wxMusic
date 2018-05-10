@@ -1,0 +1,33 @@
+<view>
+  <!-- <text>{{dataList.data.create_sheet.name}}</text> -->
+  <text class='hh'>创建的歌单</text>
+  <block wx:for="{{dataList.data.create_sheet.list}}" wx:for-item="item" wx:key class="ul">
+  <navigator url="../songsheet/songsheet?id={{item.id}}">
+    <view class="li">
+      <view class='left'>
+        <image src="{{item.picUrl}}"></image>
+      </view>
+      <view class='right'>
+        <text>{{item.name}}</text>
+        <text>共10首歌曲</text>
+      </view>
+    </view>
+   </navigator>
+  </block>
+
+  <text class='hh'>收藏的歌单</text>
+  <block wx:for="{{dataList.data.collect_sheet.list}}" wx:for-item="item" wx:key class="ul">
+  <navigator url="../songsheet/songsheet?id={{item.id}}">
+    <view class="li">
+      <view class='left'>
+        <image src="{{item.picUrl}}"></image>
+      </view>
+      <view class='right'>
+        <text class="songname">{{item.name}}</text>
+        <text>共10首歌曲</text>
+      </view>
+    </view>
+  </navigator>
+  </block>
+
+</view>

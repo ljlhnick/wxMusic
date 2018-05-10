@@ -1,0 +1,46 @@
+/**index.wxss**/
+input{
+  /* background: salmon; */
+  margin-bottom: 0.3rem;
+}
+.swiper_box{
+  width: 100%;height: 150px;
+}
+.slide-image{
+  width: 100%;display: inline-block;
+}
+
+.module{
+  clear: both;width: 100%;
+}
+.line_flag{
+  width: 0.8rem; height: 1.5rem; margin:0.5rem;
+  float: left; background: #007fff;
+}
+.flag text{
+  display: block;padding:0.5rem 0;color: #007fff;
+  border-bottom: 5px solid #b71ed7;
+}
+
+.content{
+  margin:1rem;
+}
+
+/*热门推荐*/
+
+
+/*个性化设计*/
+.person_style{
+  margin-left:0.5rem;
+}
+.item text{
+  display: block;height: 30px;line-height: 30px;
+  color: #b71ed7;margin-bottom: 0.3rem;
+}
+
+/*新碟上架*/
+.new_dish{
+  color: orange;
+}
+
+/*榜单*/

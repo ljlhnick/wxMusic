@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view>
+  <view class='search'>
+    <input type='text' placeholder='搜歌' bindconfirm="search">搜索</input>
+  </view>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' class='swiper_box'>
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item.url}}" class='slide-image'></image>
+    </swiper-item>
+  </block>
+  </swiper>
+  
+  <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>热门推荐</text>
+    </view>
+
+    <view class="hot_recomment content">
+      <block class="content_list" wx:for="{{dataList.data.hot_recomment.sheetlist}}" wx:for-item="item" wx:key>
+      <navigator url="../songsheet/songsheet?id={{item.id}}">
+         <view class='img_item item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </navigator>
+      </block>
+    </view>
+
+  </view>
+
+  <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>个性化推荐</text>
+    </view>
+ 
+    <view class="person_style content">
+      <block class="content_list" wx:for="{{dataList.data.person_style.sheetlist}}" wx:for-item="item" wx:key>
+      <navigator url="../songsheet/songsheet?id={{item.id}}">
+         <view class='item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </navigator>
+      </block>
+    </view>
+
+  </view>
+
+  <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>新碟上架</text>
+    </view>
+
+    <view class="new_dish content">
+      <block class="content_list" wx:for="{{dataList.data.new_dish.sheetlist}}" wx:for-item="item" wx:key>
+         <view class='item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </block>
+    </view>
+
+  </view>
+
+  <view class="module">
+    <view class="flag">
+      <view class="line_flag"></view>
+      <text>榜单</text>
+    </view>
+
+  <view class="billboard content">
+      <block class="content_list" wx:for="{{dataList.data.billboard.sheetlist}}" wx:for-item="item" wx:key>
+      <navigator url="../songsheet/songsheet?id={{item.id}}">
+         <view class='item'>
+            <image src="{{item.picUrl}}"></image>
+            <text>{{item.name}}</text>
+         </view>
+      </navigator>
+      </block>
+    </view>
+
+  </view>
+
+</view>

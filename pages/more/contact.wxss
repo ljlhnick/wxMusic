@@ -1,0 +1,10 @@
+.block{
+  width: 45%;float: left;margin-left: 2%;margin-top: 2%;
+}
+image{
+  width: 120px;height: 120px;border-radius: 50%;
+  display: block;margin: 0 auto;
+}
+.block text{
+  display: block;text-align: center;height: 30px;line-height: 30px;
+}

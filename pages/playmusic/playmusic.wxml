@@ -1,0 +1,14 @@
+<view>
+    <view class="up">
+        <image src="{{detail.al.picUrl}}"></image> 
+        <textarea wx:if="{{lyric}}">{{lyric}}</textarea>
+        <audio src='{{url}}' controls poster="{{detail.al.picUrl}}" name="{{detail.name}}" author='{{detail.ar[0].name}}' action="{{action}}"></audio>
+        <button type='warn' bindtap='play'>播放</button>
+        <button type='warn' bindtap='pause'>暂停</button>
+        <button type='warn' bindtap='replay'>重播</button>
+        <navigator url="../comment/comment?id={{detail.id}}">
+        <button type='warn'>查看评论</button>
+        </navigator>
+    </view>
+  
+</view>

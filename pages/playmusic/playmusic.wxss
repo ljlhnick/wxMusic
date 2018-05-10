@@ -1,0 +1,4 @@
+.up textarea{
+  overflow: hidden;
+  height: 70%;
+}

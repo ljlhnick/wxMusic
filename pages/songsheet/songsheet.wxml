@@ -1,0 +1,39 @@
+<view>
+  <block wx:if="{{creator}}">
+    <view class="creator" style="background:url({{creator.backgroundUrl}}) no-repeat;background-size:100% 100%;">
+         <image src="{{creator.avatarUrl}}" class="create_avatar"></image> 
+          <text class='nickname'>{{creator.nickname}}</text>
+          <text class='desc' wx:if="{{creator.description}}">{{creator.description}}</text>
+           <text class='signature' wx:if="{{creator.signature}}">{{creator.signature}}</text>
+    </view>
+  </block>
+
+  <block wx:for="{{musicList}}" wx:for-item="item" wx:key class="ul" wx:if="{{musicList}}">
+<navigator url="../playmusic/playmusic?id={{item.id}}">
+      <view class="li">
+      <view class='left'>
+        <image src="{{item.al.picUrl}}"></image>
+      </view>
+      <view class='right'>
+        <text>{{index+1}}. {{item.name}}</text>
+        <text>{{item.ar[0].name}}</text>
+      </view>
+    </view>
+  </navigator>
+  </block>
+  
+  <text wx:if="{{title}}" class='title'>{{title}}</text>
+  <block wx:for="{{recordList}}" wx:for-item="item" wx:key class="ul" wx:if="{{recordList}}">
+<navigator url="../playmusic/playmusic?id={{item.song.id}}">
+      <view class="li">
+      <view class='left'>
+        <image src="{{item.song.al.picUrl}}"></image>
+      </view>
+      <view class='right'>
+        <text>{{index+1}}. {{item.song.name}}</text>
+        <text>{{item.song.ar[0].name}}</text>
+      </view>
+    </view>
+  </navigator>
+  </block>
+</view>

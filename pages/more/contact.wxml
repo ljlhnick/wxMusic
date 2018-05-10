@@ -1,0 +1,27 @@
+<view> 
+
+  <view class="block"bindtap='getQq'>
+      <image src='../../images/contact/qq.png'></image>
+      <text>qq</text>
+  </view>
+  <view class="block" bindtap='getWechat'>
+      <image src='../../images/contact/wechat.png'></image>
+      <text>微信</text>
+  </view>
+  <view class="block" bindtap='getWeibo'>
+       <image src='../../images/contact/weibo.png'></image>
+       <text>新浪微博</text>
+  </view>
+  <view class="block" bindtap='getBlog'>
+      <image src='../../images/contact/pixiv.png'></image> 
+      <text>pixiv</text>
+  </view>
+  <view class="block" bindtap='getGithub'>
+      <image src='../../images/contact/csdn.png'></image>
+      <text>github</text>
+  </view>
+  <view class="block" bindtap='getPixiv'>
+      <image src='../../images/contact/pixiv.png'></image> 
+      <text>pixiv</text>
+  </view>
+</view>

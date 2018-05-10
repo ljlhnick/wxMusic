@@ -1,0 +1,30 @@
+<view>
+  <text class='title'>热门评论</text>
+  <block wx:for="{{hotcommentList}}" wx:for-item="item" wx:key>
+    <view class="comment_list">
+          <view class="up">
+            <image src='{{item.user.avatarUrl}}'></image>
+            <text>{{index+1}}. {{item.user.nickname}} </text>
+            <text bindtap='getCurTime' id="{{item.time}}"  wx:if="!{{time[index]}}">{{item.time}}</text>
+            <text wx:if="{{time[index]}}">{{time[index]}}</text>
+          </view>
+         <text decode class='comments'>{{item.content}}&emsp;<text class='fa  fa-thumbs-o-up'>{{item.likedCount}}</text></text>
+    </view>
+  </block>
+
+  <text class='title'>最新评论</text>
+  <block wx:for="{{commentList}}" wx:for-item="item" wx:key>
+    <view class="comment_list">
+          <view class="up">
+            <image src='{{item.user.avatarUrl}}'></image>
+            <text>{{index+1}}. {{item.user.nickname}} </text>
+            <text bindtap='getCurTime' id="{{item.time}}" wx:if="!{{time[index]}}">{{item.time}}</text>
+            <text wx:if="{{time[index]}}">{{time[index]}}</text>
+          </view>
+          <text decode  class='comments'>{{item.content}}&emsp;<text class='fa  fa-thumbs-o-up'>{{item.likedCount}}</text></text> 
+         
+    </view>
+  </block>
+
+  <button type='primary' plain bindtap='more' id="{id:{{id}} }">查看更多评论</button>
+</view>

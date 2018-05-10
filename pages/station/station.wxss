@@ -1,0 +1,36 @@
+.navbar{
+  clear: both;
+}
+.nav{
+  width: 48%;float: left;margin: 0.5rem 0;
+}
+.nav text{
+  padding:0.1rem;color: #909090;font-size: 15px;
+}
+.module{
+  clear: both;
+}
+.line_flag{
+  width: 0.8rem; height: 1.5rem; margin:0.5rem;
+  float: left; background: #007fff;
+}
+.flag text{
+  display: block;padding:0.5rem 0;color: #007fff;
+  border-bottom: 5px solid #b71ed7;
+}
+
+.module{
+  clear: both;
+}
+.content{
+  margin-top:1rem;
+}
+.item{
+  width: 49%;float: left;
+}
+.item image{
+  width: 100%;
+}
+.item text{
+  display: inline-block;height:30px;line-height: 30px;overflow: hidden;color: #909090;
+}

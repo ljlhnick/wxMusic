@@ -1,0 +1,15 @@
+<view >
+  <block wx:for="{{resultList}}" wx:key class="ul">
+  <navigator url="../playmusic/playmusic?id={{item.id}}">
+    <view class='li'>
+       <view class='left'>
+        <image src="{{item.al.picUrl}}"></image>
+       </view>
+       <view class='right'>
+           <text class="songname">{{index+1}}. {{item.name}}</text>
+           <text class="author">{{item.ar[0].name}}</text>
+       </view>
+    </view>
+  </navigator> 
+  </block>
+</view>

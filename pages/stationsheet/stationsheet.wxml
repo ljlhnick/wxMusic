@@ -1,0 +1,44 @@
+<view>
+  <block>
+    <view class="creator" style="background:url({{backgroundUrl}}) no-repeat;background-size:100% 100%;">
+         <image src="{{creator.picUrl}}" class="create_avatar"></image> 
+          <text class='nickname'>{{creator.name}}</text>
+          <text class='desc' wx:if="{{creator.description}}">{{creator.description}}</text>
+          <text class="brand" wx:if="{{dj.brand}}">{{dj.brand}}</text>
+    </view>
+  </block>
+
+  <block>
+    <view class='radio'>
+      <button type='warn' plain size='mini'>{{radio.category}}</button>
+      <view class='right'>
+          <text>{{radio.name}}</text>
+          <text>创建时间{{res.createTime}}</text>
+          <text>播放{{res.listenerCount}}次</text>
+      </view>
+      <view style='clear:both;'>
+          <text class="desc">介绍:{{res.description}}</text>
+      </view>
+    </view>
+  </block>
+
+  <!-- <block wx:if="musicList.length===0">
+  <navigator url="../comment/comment?id={{item.id}}">
+    <button type='primary' plain>暂无数据</button>
+  </navigator>
+  </block> -->
+
+  <block wx:for="{{musicList}}" wx:for-item="item" wx:key class="ul">
+<navigator url="../playmusic/playmusic?id={{item.id}}">
+      <view class="li">
+        <view class='left'>
+          <image src="{{item.album.picUrl}}"></image>
+        </view>
+        <view class='right'>
+          <text>{{index+1}}. {{item.name}}</text>
+          <text>{{item.artists[0].name}}</text>
+        </view>
+      </view>
+  </navigator>
+  </block>
+</view>
